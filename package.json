@@ -9,7 +9,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "@bhalloff/portfolio-client": "1.0.0^",
+    "@bhalloff/portfolio-client": "^1.0.0",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
