@@ -1,14 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: source
     destination: /webapps/portfolio
 hooks:
-  BeforeInstall:
-    - location: Scripts/UnzipResourceBundle.sh
   AfterInstall:
-    - location: Scripts/RunResourceTests.sh
+    - location: scripts/RunResourceTests.sh
       timeout: 180
   ApplicationStart:
-    - location: Scripts/RunApplication.sh
+    - location: scripts/RunApplication.sh
       timeout: 3600
