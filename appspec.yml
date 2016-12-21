@@ -3,7 +3,16 @@ os: linux
 files:
   - source: /
     destination: /webapps/portfolio
+  - source: default
+    destination: /etc/nginx/sites-available
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
 hooks:
+  BeforeInstall:
+    - location: scripts/PrepNginxConf.sh
   AfterInstall:
     - location: scripts/RunResourceTests.sh
       timeout: 180
